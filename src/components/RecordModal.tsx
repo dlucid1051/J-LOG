@@ -123,6 +123,15 @@ export const RecordModal: React.FC<RecordModalProps> = ({
             }),
           });
 
+          if (!res.ok) {
+            if (res.status === 404) {
+              setOcrErrorMessage('Receipt attached to record. Note: On static GitHub Pages hosting, receipt photos are stored directly in your log & audit PDFs. Enter field values manually.');
+              return;
+            }
+            const errorJson = await res.json().catch(() => null);
+            throw new Error(errorJson?.error || `Server responded with ${res.status}`);
+          }
+
           const json = await res.json();
           if (json.success && json.data) {
             const data = json.data;
