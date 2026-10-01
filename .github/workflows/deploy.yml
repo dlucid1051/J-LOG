@@ -35,7 +35,8 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
+      #  run: npm install
 
       - name: Build static web app (Vite + PWA)
         run: npm run build
