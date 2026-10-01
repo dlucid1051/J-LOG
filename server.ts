@@ -170,7 +170,10 @@ async function startServer() {
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Fuel Log server listening on http://0.0.0.0:${PORT}`);
+    //console.log(`Fuel Log server listening on http://0.0.0.0:${PORT}`);
+    console.log(`Fuel Log server listening on:`);
+    console.log(`  -> Local:   http://localhost:${PORT}`);
+    console.log(`  -> Network: http://0.0.0.0:${PORT}`);
   });
 }
 
