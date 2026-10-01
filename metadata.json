@@ -1,0 +1,6 @@
+{
+  "name": "J-Log",
+  "description": "J-Log: Mobile PWA fuel purchase log with receipt capture, OCR prefill, IndexedDB offline storage, and printable audit reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
